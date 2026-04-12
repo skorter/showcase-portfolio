@@ -1,0 +1,42 @@
+[
+  {
+    "id": "facebook",
+    "label": "Facebook",
+    "url": "https://www.facebook.com/profile.php?id=100008420058240&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1E5YyxttPM%2F#"
+  },
+  {
+    "id": "instagram",
+    "label": "Instagram",
+    "url": "https://www.instagram.com/_.sylyx._/"
+  },
+  {
+    "id": "threads",
+    "label": "Threads",
+    "url": "https://www.threads.net/@_.sylyx._"
+  },
+  {
+    "id": "youtube",
+    "label": "YouTube",
+    "url": "https://www.youtube.com/channel/UCxHYhJ7bEDULGSKfy-b2Aug"
+  },
+  {
+    "id": "linkedin",
+    "label": "LinkedIn",
+    "url": "https://www.linkedin.com/in/sylvio-makni/"
+  },
+  {
+    "id": "github",
+    "label": "GitHub",
+    "url": "https://github.com/skorter"
+  },
+  {
+    "id": "gitlab",
+    "label": "GitLab",
+    "url": "https://git.fhict.nl/I546177"
+  },
+  {
+    "id": "linktree",
+    "label": "Linktree",
+    "url": "https://linktr.ee/sylvio.makni"
+  }
+]

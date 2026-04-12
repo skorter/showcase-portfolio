@@ -40,9 +40,10 @@ export function SoundProvider({ children }) {
             } else {
                 const audio = clickRef.current;
                 if (audio) {
-                    audio.pause();
                     audio.currentTime = 0;
-                }
+                    audio.pause();
+                };
+                
             }
 
             return newState;
@@ -59,8 +60,8 @@ export function SoundProvider({ children }) {
             audio.play().catch(() => {});
         }
 
-        window.addEventListener("mousedown", playClick);
-        return () => window.removeEventListener("mousedown", playClick);
+        window.addEventListener("pointerdown", playClick);
+        return () => window.removeEventListener("pointerdown", playClick);
     }, []);
 
     const value = useMemo(() => ({ soundOn, toggleSound }), [soundOn]);

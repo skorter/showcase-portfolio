@@ -1,34 +1,28 @@
 .board {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: var(--pure);
-    background-image:
-        linear-gradient(to right, var(--background-color) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--background-color) 1px, transparent 1px);
-    background-size: 35px 35px;
-    box-shadow: inset 0 0 100px 30px var(--pure);
-    background-position: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-position: center;
 }
 
 .sticker {
-    position: absolute;
-    inset: 0;
-    border: none;
-    background: transparent;
-    padding: 0;
-    cursor: grab;
-    touch-action: none;
+  position: absolute;
+  inset: 0;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: grab;
+  touch-action: none;
 }
 
 .sticker:active {
-    cursor: grabbing;
+  cursor: grabbing;
 }
 
 .sticker img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.55));
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(2px 4px 15px var(--sticker-shadow));
 }

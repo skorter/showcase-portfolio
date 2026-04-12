@@ -1,0 +1,270 @@
+[
+  {
+    "projectId": "showcase-portfolio",
+    "projectImage": "/images/showcase-portfolio.png",
+    "projectName": "Showcase Portfolio",
+    "projectDescription": "A responsive order and contact flow that allows users to submit relevant information via a form. The submission is processed server-side, delivered via email, and followed by a confirmation page that clearly signals successful completion of the request.",
+    "projectMeta": {
+      "role": "Front-end & Server-side",
+      "scope": "University Assignment",
+      "date": {
+        "label": "November 2025",
+        "value": "2025-11-26"
+      }
+    },
+    "projectTechStack": [
+      {
+        "name": "HTML",
+        "path": "/icons/html-logo-icon.png"
+      },
+      {
+        "name": "CSS",
+        "path": "/icons/css-logo-icon.png"
+      },
+      {
+        "name": "PHP",
+        "path": "/icons/php-logo-icon.png"
+      }
+    ],
+    "projectCode": {
+      "label": "Inspect Code",
+      "link": "https://github.com/username/showcase-portfolio"
+    },
+    "projectDemo": {
+      "label": "Live Demo",
+      "link": "https://i546177.hera.fontysict.net/Interactive%20Media/Projects/Individual%20Projects/portfolio-website/public/index.html#home"
+    }
+  },
+  {
+    "projectId": "form-based-quote-system",
+    "projectImage": "/images/form-based-quote-system.png",
+    "projectName": "Form-Based Quote System",
+    "projectDescription": "A responsive order and contact flow that allows users to submit relevant information via a form. The submission is processed server-side, delivered via email, and followed by a confirmation page that clearly signals successful completion of the request.A responsive order and contact flow that allows users to submit relevant information via a form.",
+    "projectMeta": {
+      "role": "Front-end & Server-side",
+      "scope": "University Assignment",
+      "date": {
+        "label": "November 2025",
+        "value": "2025-11-26"
+      }
+    },
+    "projectTechStack": [
+      {
+        "name": "HTML",
+        "path": "/icons/html-logo-icon.png"
+      },
+      {
+        "name": "CSS",
+        "path": "/icons/css-logo-icon.png"
+      },
+      {
+        "name": "PHP",
+        "path": "/icons/php-logo-icon.png"
+      }
+    ],
+    "projectCode": {
+      "label": "Inspect Code",
+      "link": "https://github.com/username/showcase-portfolio"
+    },
+    "projectDemo": {
+      "label": "Live Demo",
+      "link": "https://i546177.hera.fontysict.net/Interactive%20Media/Bootcamp%20Challenges/Challenge%2007%20-%20orderpage%20with%20mailconfirmation%20php/index.php?menu=home"
+    }
+  },
+  {
+    "projectId": "mini-pacman-game",
+    "projectName": "Mini Pac-Man Game",
+    "projectImage": "/images/mini-pacman-game.png",
+    "projectDescription": "An interactive animation that recreates a Pac-Man game scene, allowing users to start, reset, and trigger character reactions through keyboard and hover interactions, resulting in dynamic visuals and responsive character behavior.",
+    "projectMeta": {
+      "role": "Front-end",
+      "scope": "University Assignment",
+      "date": {
+        "label": "November 2025",
+        "value": "2025-11-03"
+      }
+    },
+    "projectTechStack": [
+      {
+        "name": "HTML",
+        "path": "/icons/html-logo-icon.png"
+      },
+      {
+        "name": "CSS",
+        "path": "/icons/css-logo-icon.png"
+      },
+      {
+        "name": "JavaScript",
+        "path": "/icons/js-logo-icon.png"
+      }
+    ],
+    "projectCode": {
+      "label": "Inspect Code",
+      "link": "https://github.com/username/showcase-portfolio"
+    },
+    "projectDemo": {
+      "label": "Live Demo",
+      "link": "https://i546177.hera.fontysict.net/Interactive%20Media/Bootcamp%20Challenges/Challenge%2004%20-%20interactive%20animation/"
+    }
+  },
+  {
+    "projectId": "desktop-coffee-recipe-widget",
+    "projectName": "Desktop Coffee Recipe Widget",
+    "projectImage": "/images/desktop-coffee-recipe-widget.png",
+    "projectDescription": "A cozy desktop widget with a pixelated visual style that lets users browse coffee recipes and open step-by-step instructions in an app-like view. It uses a data-driven menu and includes sound effects and background music.",
+    "projectMeta": {
+      "role": "Front-end & Desktop UI",
+      "scope": "Freelance Project",
+      "date": {
+        "label": "September 2025",
+        "value": "2025-09-22"
+      }
+    },
+    "projectTechStack": [
+      {
+        "name": "HTML",
+        "path": "/icons/html-logo-icon.png"
+      },
+      {
+        "name": "CSS",
+        "path": "/icons/css-logo-icon.png"
+      },
+      {
+        "name": "JavaScript",
+        "path": "/icons/js-logo-icon.png"
+      },
+      {
+        "name": "Node.js",
+        "path": "/icons/nodejs-logo-icon.png"
+      },
+      {
+        "name": "Electron",
+        "path": "/icons/electron-logo-icon.png"
+      }
+    ],
+    "projectCode": {
+      "label": "Inspect Code",
+      "link": "https://github.com/username/desktop-coffee-widget"
+    },
+    "projectDemo": {
+      "label": "Download App",
+      "link": "https://github.com/skorter/desktop-coffee-widget/releases/download/v1.0.0/Coffee.Widget.Setup.1.0.2.exe"
+    }
+  },
+  {
+    "projectId": "rock-paper-scissors-game",
+    "projectName": "Rock Paper Scissors Game",
+    "projectImage": "/images/rock-paper-scissors-game.png",
+    "projectDescription": "A simple Rock–Paper–Scissors game built as a self-study project to practice JavaScript fundamentals. The project focuses on game logic, state management, user input handling, and dynamic score tracking, with minimal styling to keep the emphasis on functionality.",
+    "projectMeta": {
+      "role": "Front-end (client-side)",
+      "scope": "Self-Study Project",
+      "date": {
+        "label": "September 2025",
+        "value": "2025-09-27"
+      }
+    },
+    "projectTechStack": [
+      {
+        "name": "HTML",
+        "path": "/icons/html-logo-icon.png"
+      },
+      {
+        "name": "CSS",
+        "path": "/icons/css-logo-icon.png"
+      },
+      {
+        "name": "JavaScript",
+        "path": "/icons/js-logo-icon.png"
+      }
+    ],
+    "projectCode": {
+      "label": "Inspect Code",
+      "link": "https://github.com/username/rock-paper-scissors-game"
+    },
+    "projectDemo": {
+      "label": "Live Demo",
+      "link": "https://skorter.github.io/rock-paper-scissors-game/"
+    }
+  },
+  {
+    "projectId": "tip-calculator",
+    "projectName": "Tip Calculator",
+    "projectImage": "/images/tip-calculator.png",
+    "projectDescription": "A simple tip calculator that allows users to calculate the tip, total bill, and per-person amount based on user input. The project focuses on JavaScript calculation logic, input handling, and basic validation, with minimal styling to keep the emphasis on functionality.",
+    "projectMeta": {
+      "role": "Front-end (client-side)",
+      "scope": "Self-Study Project",
+      "date": {
+        "label": "September 2025",
+        "value": "2025-09-25"
+      }
+    },
+    "projectTechStack": [
+      {
+        "name": "HTML",
+        "path": "/icons/html-logo-icon.png"
+      },
+      {
+        "name": "JavaScript",
+        "path": "/icons/js-logo-icon.png"
+      }
+    ],
+    "projectCode": {
+      "label": "Inspect Code",
+      "link": "https://github.com/username/showcase-portfolio"
+    },
+    "projectDemo": {
+      "label": "Live Demo",
+      "link": "https://skorter.github.io/tip-calculator/"
+    }
+  },
+  {
+    "projectId": "online-vinyl-store",
+    "projectName": "Online Vinyl Store",
+    "projectImage": "/images/online-vinyl-store.png",
+    "projectDescription": "A vinyl webshop concept developed using AI-assisted web development, focused on personalized browsing, curated product presentation, and a complete shopping flow with database-driven stock and access management, cart functionality, and checkout support.",
+    "projectMeta": {
+      "role": "Full-Stack Web Application",
+      "scope": "University Assignment",
+      "date": {
+        "label": "May 2025",
+        "value": "2025-05-22"
+      }
+    },
+    "projectTechStack": [
+      {
+        "name": "HTML",
+        "path": "/icons/html-logo-icon.png"
+      },
+      {
+        "name": "CSS",
+        "path": "/icons/css-logo-icon.png"
+      },
+      {
+        "name": "JavaScript",
+        "path": "/icons/js-logo-icon.png"
+      },
+      {
+        "name": "Bootstrap",
+        "path": "/icons/bootstrap-logo-icon.png"
+      },
+      {
+        "name": "Supabase",
+        "path": "/icons/supabase-logo-icon.png"
+      },
+      {
+        "name": "Stripe",
+        "path": "/icons/stripe-logo-icon.png"
+      }
+    ],
+    "projectCode": {
+      "label": "Inspect Code",
+      "link": "https://github.com/username/velvet-echo"
+    },
+    "projectDemo": {
+      "label": "Live Demo",
+      "link": "https://i546177.hera.fontysict.net/StartSemester/Projects/velvet-echo/public/index.html"
+    }
+  }
+]

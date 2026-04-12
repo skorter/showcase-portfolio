@@ -1,0 +1,23 @@
+{
+  "projectId": "project-id",
+  "projectName": "Project Name",
+  "projectDescription": "Short description of the project.",
+  "projectMeta": {
+    "role": "Front-end / Front-end & Server-side / Full-stack",
+    "scope": "University Assignment / Personal Project",
+    "date": {
+      "label": "Month YYYY",
+      "value": "YYYY-MM-DD"
+    }
+  },
+  "projectTechStack": [
+    { 
+      "name": "HTML", 
+      "path": "../public/assets/icons/html-logo-icon.png" 
+    }
+  ],
+  "projectDemo": {
+    "label": "Live Demo",
+    "link": ""
+  }
+}
