@@ -181,8 +181,6 @@ _Coming soon — overview of the page structure, modal/pop-up window system, dat
 │   │   ├── ⚙️ legend.json
 │   │   ├── ⚙️ projects.json
 │   │   └── 📄 searchIndex.js                   # JSON-driven content for each section + Fuse.js search index
-│   └── 📁 lib/
-│       └── 📄 utils.js                         # Shared utility functions
 ├── ⚙️ .gitignore                               # Excludes node_modules, .env.local, build output, and editor files
 ├── 📄 LICENSE                                  # MIT License
 ├── 📝 README.md                                # Project documentation
