@@ -241,7 +241,7 @@ Commit frequency was inconsistent throughout the project — there were stretche
 
 ## Installation & Usage
 
-The deployed project is live at: _[Vercel link coming soon]_
+The deployed project is live at: [skorter.vercel.app](https://showcase-portfolio-seven.vercel.app/)
 
 To run it locally:
 
