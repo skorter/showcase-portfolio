@@ -1,0 +1,59 @@
+.legendPageContent {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.legendPageContent .section {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.legendPageContent .section:not(:last-child) {
+  border-bottom: 1px solid var(--margin-color);
+}
+
+.legendPageContent .section > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.legendPageContent .section h2 {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  font-weight: var(--text-label-weight);
+  letter-spacing: var(--text-label-spacing);
+  opacity: var(--text-label-opacity);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.legendPageContent .section div p {
+  font-size: var(--text-primary);
+  opacity: var(--text-primary-opacity);
+  text-indent: 1.5rem;
+}
+
+.legendPageContent .section div h3 {
+  font-family: var(--font-mono);
+  font-size: var(--text-subheading);
+  font-weight: var(--text-subheading-weight);
+  letter-spacing: var(--text-subheading-spacing);
+  opacity: var(--text-subheading-opacity);
+  text-transform: uppercase;
+}
+
+.legendPageContent .section .stickers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.stickers img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}

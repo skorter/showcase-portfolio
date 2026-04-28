@@ -60,7 +60,7 @@
   pointer-events: none;
 }
 
-/* Hide the fake placeholder (next element) when the real input is not empty (has a value) => when the input is not showing its placeholder it means it contains a value */
+/* Hide the fake placeholder when the real input is not empty (has a value) => when the input is not showing its placeholder it means it contains a value */
 .searchInput:not(:placeholder-shown) + .fakeSearchInputPlaceholder {
   opacity: 0;
 }
@@ -74,21 +74,60 @@
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: white;
-  max-height: 200px;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
   overflow-y: auto;
+  max-height: 320px;
   z-index: 99999;
-  border-radius: 0 0 1.1rem 1.1rem;
 }
 
-.searchResults li {
+.searchResults .resultItem {
   padding: 0.5rem 1rem;
-  cursor: pointer;
   display: flex;
-  justify-content: space-between;
-  color: black;
+  align-items: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  gap: 0.75rem;
 }
 
-.searchResults li:hover {
-  background-color: #f0f0f0;
+.searchResults .resultItem:hover,
+.searchResults .resultItemActive {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.searchResults .resultItem .resultBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.searchResults .resultItem .resultBody .resultSection {
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.searchResults .resultItem .resultBody .resultSnippet {
+  font-size: 0.75rem;
+  color: #aaa;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.searchResults .resultItem .resultPage {
+  font-size: 0.75rem;
+  font-weight: 600;
+  flex-shrink: 0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }

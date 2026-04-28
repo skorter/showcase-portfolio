@@ -5,6 +5,7 @@ export default function EmailTemplate({
   lastName,
   companyName,
   email,
+  subject,
   message,
 }) {
   return (
@@ -22,6 +23,9 @@ export default function EmailTemplate({
         )}
         <li>
           <strong>Email:</strong> {email}
+        </li>
+        <li>
+          <strong>Subject:</strong> {subject}
         </li>
       </ul>
       <h2>Message:</h2>

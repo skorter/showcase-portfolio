@@ -17,7 +17,6 @@ export default function ProjectsContent() {
         spacing={2}
         defaultHeight={450}
         defaultColumns={4}
-        defaultSpacing={2}
         sequential
       >
         {projects.map((project) => (

@@ -5,22 +5,22 @@ import contactData from "./contact.json";
 export const searchIndex = [
   {
     id: "about-intro",
-    page: "About Me",
+    page: "About",
     section: "Introduction",
     content: aboutData.about.introduction,
     href: "/about",
   },
   {
     id: "about-interests",
-    page: "About Me",
+    page: "About",
     section: "Interests",
     content: aboutData.about.interests,
     href: "/about",
   },
   {
     id: "about-skills-core-stack",
-    page: "About Me",
-    section: "Skills - Core Stack",
+    page: "About",
+    section: "Skills — Core Stack",
     content: aboutData.skills
       .find((skill) => skill.label === "Core Stack")
       .items.join(", "),
@@ -28,17 +28,17 @@ export const searchIndex = [
   },
   {
     id: "about-skills-tools",
-    page: "About Me",
-    section: "Skills - Tools",
+    page: "About",
+    section: "Skills — Tools",
     content: aboutData.skills
       .find((skill) => skill.label === "Tools")
       .items.join(", "),
     href: "/about",
   },
   {
-    id: "about-skills-getting-familiar-with",
-    page: "About Me",
-    section: "Skills - Getting Familiar With",
+    id: "about-skills-familiar",
+    page: "About",
+    section: "Skills — Getting Familiar With",
     content: aboutData.skills
       .find((skill) => skill.label === "Getting Familiar With")
       .items.join(", "),
@@ -46,15 +46,15 @@ export const searchIndex = [
   },
   {
     id: "about-facts-location",
-    page: "About Me",
-    section: "Facts",
+    page: "About",
+    section: "Facts — Location",
     content: aboutData.facts.find((fact) => fact.label === "Location").value,
     href: "/about",
   },
   {
     id: "about-facts-languages",
-    page: "About Me",
-    section: "Facts",
+    page: "About",
+    section: "Facts — Languages",
     content: aboutData.facts
       .find((fact) => fact.label === "Languages")
       .items.join(", "),
@@ -62,30 +62,42 @@ export const searchIndex = [
   },
   {
     id: "about-facts-education",
-    page: "About Me",
-    section: "Facts",
+    page: "About",
+    section: "Facts — Education",
     content: aboutData.facts.find((fact) => fact.label === "Education").value,
     href: "/about",
   },
   {
     id: "about-facts-status",
-    page: "About Me",
-    section: "Facts",
+    page: "About",
+    section: "Facts — Status",
     content: aboutData.facts.find((fact) => fact.label === "Status").value,
     href: "/about",
   },
-  ...contactData.map((contact) => ({
+  ...contactData.contactDetails.map((contact) => ({
     id: `contact-${contact.id}`,
     page: "Contact",
-    section: contact.label,
-    content: contact.label,
+    section: `Contact Details — ${contact.label}`,
+    content: contact.value ?? contact.label,
+    href: "/contact",
+  })),
+  ...contactData.socials.map((social) => ({
+    id: `contact-social-${social.id}`,
+    page: "Contact",
+    section: `Socials — ${social.label}`,
+    content: social.label,
     href: "/contact",
   })),
   ...projectsData.map((project) => ({
     id: `project-${project.projectId}`,
     page: "Projects",
     section: project.projectName,
-    content: ` ${project.projectDescription} ${project.projectMeta.role} ${project.projectMeta.scope} ${project.projectTechStack.map((t) => t.name).join(" ")}`,
+    content: [
+      project.projectDescription,
+      project.projectMeta.role,
+      project.projectMeta.scope,
+      project.projectTechStack.map((tech) => tech.name).join(", "),
+    ].join(" — "),
     href: "/projects",
   })),
 ];

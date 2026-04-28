@@ -1,0 +1,66 @@
+{
+  "pages": {
+    "heading": "Pages",
+    "items": [
+      {
+        "stickers": [
+          "./stickers/10.png",
+          "./stickers/17.png",
+          "./stickers/18.png",
+          "./stickers/19.png"
+        ],
+        "label": "About",
+        "description": "Click any sticker that's a picture of me to open the About Me page."
+      },
+      {
+        "stickers": [
+          "./stickers/15.png",
+          "./stickers/16.png",
+          "./stickers/23.png",
+          "./stickers/24.png"
+        ],
+        "label": "Projects",
+        "description": "Click any code or tech related sticker to open the Projects page."
+      },
+      {
+        "stickers": ["./stickers/20.png", "./stickers/27.png"],
+        "label": "Contact",
+        "description": "Click the phone or laptop sticker to open the Contact page."
+      }
+    ]
+  },
+  "navigation": {
+    "heading": "Navigation",
+    "description": "Once inside a page, you can navigate directly to the other pages from within — no need to close and reopen."
+  },
+  "pinned": {
+    "heading": "Pinned to the top",
+    "description": "These stickers sit at the top of the page at all times — use them to toggle the theme and sound whenever you like.",
+    "stickers": [
+      "./stickers/1.png",
+      "./stickers/25.png",
+      "./stickers/26.png",
+      "./stickers/4.png"
+    ]
+  },
+  "toggles": {
+    "heading": "Theme & Sound",
+    "items": [
+      {
+        "stickers": ["./stickers/7.png", "./stickers/25.png"],
+        "label": "Light Mode",
+        "description": "Click the sun or white tote bag to switch to dark mode. They'll swap to a moon and a black tote bag."
+      },
+      {
+        "stickers": ["./stickers/8.png", "./stickers/26.png"],
+        "label": "Dark Mode",
+        "description": "Click the moon or black tote bag to switch back to light mode. They'll swap back to a sun and a white tote bag."
+      },
+      {
+        "stickers": ["./stickers/4.png"],
+        "label": "Sound",
+        "description": "Click the cat with headphones to toggle click sounds on or off."
+      }
+    ]
+  }
+}

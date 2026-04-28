@@ -1,10 +1,13 @@
-/* PROJECTS CONTENT */
 .projectPageContent {
   width: 100%;
-  height: auto;
+  padding: 1rem 1rem 0 1rem;
 }
 
-/* PROJECT ITEM */
+.projectPageContent :global(.MuiMasonry-root) {
+  margin: 0 !important;
+  width: 100% !important;
+}
+
 .projectPageContent .projectItem {
   border: 2px solid var(--margin-color);
   border-radius: 8px;
@@ -38,7 +41,6 @@
   text-indent: 1.5rem;
 }
 
-/* PROJECT META */
 .projectPageContent .projectItem .projectMeta {
   list-style: none;
   padding: 0;
@@ -49,7 +51,6 @@
 }
 
 .projectPageContent .projectItem .projectMeta li {
-  font-family: var(--font-mono);
   font-size: var(--text-primary);
   font-weight: var(--text-secondary-weight);
   opacity: var(--text-primary-opacity);
@@ -57,7 +58,6 @@
 
 .projectPageContent .projectItem .projectMeta li::before {
   content: "→ ";
-  opacity: var(--text-primary-opacity);
 }
 
 .projectPageContent .projectItem .projectTechStack {
