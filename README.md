@@ -33,9 +33,9 @@ Rather than defaulting to flashy visuals or a purely technical showcase, this po
 
 ## Preview
 
-![Landing page showing a dark grid background covered in draggable stickers — including a white cat, tarot cards, a Rubik's cube, programming memes, and personal photos — surrounding a central greeting and search bar](public/readme-preview/landing.png)
-
 ![Lottie cube animation displayed as a full-screen loader on initial page load](public/readme-preview/loading.png)
+
+![Landing page showing a dark grid background covered in draggable stickers — including a white cat, tarot cards, a Rubik's cube, programming memes, and personal photos — surrounding a central greeting and search bar](public/readme-preview/landing.png)
 
 ![Contact page modal with a get in touch form on the left, and contact information, social media icons, and an interactive map on the right](public/readme-preview/contact.png)
 
@@ -92,7 +92,27 @@ Rather than defaulting to flashy visuals or a purely technical showcase, this po
 
 ## Architecture & Structure
 
-_Coming soon — overview of the page structure, modal/pop-up window system, data layer, and component organization._
+The portfolio is structured as a Next.js App Router project, but navigates entirely through a `PageModal` overlay system — clicking a sticker on the landing page opens a pop-up window with background blur and dimming, keeping the sticker board always visible behind it. There are no traditional page transitions or full route changes.
+
+**Page structure**
+
+The `app/` directory contains the root layout, global styles, and the landing page. The `about/`, `projects/`, and `contact/` folders each hold a `page.jsx`, but these exist primarily as named routes — their actual content is rendered through the shared `PageModal` wrapper via dedicated content components in `src/components/`. The Legend is not a route at all — it opens as a modal directly from the landing page via `LegendModal`.
+
+**Component organisation**
+
+Each component lives in its own named folder inside `src/components/`, co-located with its CSS Module. `SearchBar/SearchBar.jsx` and `SearchBar/SearchBar.module.css` always sit together — styles stay scoped and easy to find.
+
+**Data layer**
+
+All page content lives in `src/data/` as JSON files (`about.json`, `projects.json`, `contact.json`, `legend.json`). Components import directly from these files, keeping data completely separate from UI logic. The `searchIndex.js` file in the same folder imports from all JSON files and flattens them into a single array for Fuse.js to search across.
+
+**API**
+
+A single Next.js API route (`app/api/send/route.js`) handles contact form submissions via Resend. No other backend logic exists — everything else is client-side.
+
+**Theming and global state**
+
+Dark/light mode is managed by `next-themes` at the root layout level. Sound toggle state is managed through `SoundProvider` — a context provider written for this project and mounted at the root alongside the theme provider, making both available globally without prop drilling.
 
 ---
 
