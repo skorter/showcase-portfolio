@@ -1,0 +1,61 @@
+{
+  "about": {
+    "introduction": "Hi, I'm Sylvio! I'm currently in my third semester at Fontys ICT studying Interactive Media. I have a big passion for web development and mobile app design — I love the idea of building things that actually make sense and help people in some way. I let my creativity and intuition guide me when crafting digital experiences.",
+    "interests": "When I'm not coding or designing, you'll probably find me playing Overwatch, collecting Pokémon cards, or just putting on a vinyl record and chilling. I edit videos here and there too. Coffee is basically a personality trait at this point. In the winter I go skiing and in the summer I'm usually playing beach volleyball with friends."
+  },
+  "skills": [
+    {
+      "label": "Core Stack",
+      "items": ["HTML", "CSS", "JavaScript", "Supabase", "Next.js"]
+    },
+    {
+      "label": "Tools",
+      "items": [
+        "VS Code",
+        "Figma",
+        "Git",
+        "GitLab",
+        "GitHub",
+        "HERA",
+        "FileZilla",
+        "Vercel",
+        "Adobe Premiere Pro"
+      ]
+    },
+    {
+      "label": "Getting Familiar With",
+      "items": [
+        "React",
+        "SASS",
+        "Node.js",
+        "SQL (MSSQL)",
+        "Electron.js",
+        "Express.js",
+        "p5.js"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "label": "Education",
+      "value": "ICT Bachelor's Degree at Fontys University of Applied Sciences."
+    },
+    {
+      "label": "Languages",
+      "items": [
+        "Bulgarian — native",
+        "German — native",
+        "English — C1",
+        "French — B2"
+      ]
+    },
+    {
+      "label": "Location",
+      "value": "Based in the Netherlands, open to remote opportunities worldwide."
+    },
+    {
+      "label": "Status",
+      "value": "Available for internships and freelance projects."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("/fonts/SpaceMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("/fonts/SpaceMono-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --pure: #000000;
+  --opposite: #ffffff;
+  --background-color: rgba(255, 255, 255, 0.2);
+  --title-font-family: "Stretch Pro", sans-serif;
+  --body-font-family: "Roboto", sans-serif;
+  --sticker-shadow: rgba(255, 255, 255, 0.5);
+  --blur: 30px;
+  --margin-color: rgba(255, 255, 255, 0.2);
+
+  --font-body: "Satoshi", sans-serif;
+  --font-mono: "Space Mono", monospace;
+
+  --text-primary: 1rem;
+  --text-primary-opacity: 1;
+
+  --text-label: 1rem;
+  --text-label-opacity: 0.85;
+  --text-label-weight: 600;
+  --text-label-spacing: 0.12em;
+
+  --text-subheading: 0.85rem;
+  --text-subheading-opacity: 0.75;
+  --text-subheading-weight: 600;
+  --text-subheading-spacing: 0.1em;
+
+  --text-secondary: 1rem;
+  --text-secondary-opacity: 1;
+  --text-secondary-weight: 400;
+  --text-secondary-spacing: 0em;
+  --glass-backdrop: blur(2px) saturate(120%) brightness(1.1) !important;
+}
+
+.light {
+  --pure: #ffffff;
+  --white: #ffffff;
+  --black: #000000;
+  --opposite: #000000;
+  --background-color: rgba(0, 0, 0, 0.1);
+  --sticker-shadow: rgba(0, 0, 0, 0.9);
+  --margin-color: rgba(0, 0, 0, 0.3);
+  --glass-backdrop: blur(2px) saturate(120%) brightness(1) !important;
+}
+
+body {
+  font-family: var(--font-body);
+}

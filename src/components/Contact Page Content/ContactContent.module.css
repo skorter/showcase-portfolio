@@ -1,0 +1,353 @@
+.contactPageContent {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "form right"
+    "faq faq";
+  position: relative;
+}
+
+.contactPageContent .contactForm {
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-right: 1px solid var(--margin-color);
+}
+
+.contactPageContent .contactForm h2 {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  font-weight: var(--text-label-weight);
+  letter-spacing: var(--text-label-spacing);
+  opacity: var(--text-label-opacity);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.contactPageContent .contactForm form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "firstName lastName"
+    "companyName companyName"
+    "email email"
+    "subject subject"
+    "message message"
+    "submit submit";
+  row-gap: 1.5rem;
+  column-gap: 1rem;
+}
+
+.contactPageContent .contactForm form .firstNameField {
+  grid-area: firstName;
+}
+.contactPageContent .contactForm form .lastNameField {
+  grid-area: lastName;
+}
+.contactPageContent .contactForm form .companyNameField {
+  grid-area: companyName;
+}
+.contactPageContent .contactForm form .emailField {
+  grid-area: email;
+}
+.contactPageContent .contactForm form .subjectField {
+  grid-area: subject;
+}
+.contactPageContent .contactForm form .messageField {
+  grid-area: message;
+}
+
+.contactPageContent .contactForm form article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.contactPageContent .contactForm form article label {
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translateY(-50%);
+  transform-origin: left center;
+  font-family: var(--font-mono);
+  font-size: var(--text-subheading);
+  font-weight: var(--text-subheading-weight);
+  letter-spacing: var(--text-subheading-spacing);
+  background-color: var(--pure);
+  text-transform: uppercase;
+  pointer-events: none;
+  transition:
+    top 0.2s ease,
+    transform 0.2s ease,
+    font-size 0.2s ease,
+    left 0.2s ease;
+}
+
+.contactPageContent .contactForm form article label span {
+  color: var(--opposite);
+  opacity: var(--text-subheading-opacity);
+}
+
+.contactPageContent .contactForm form .messageField label {
+  top: 15%;
+  transform: translateY(-50%);
+}
+
+.contactPageContent .contactForm form article input,
+.contactPageContent .contactForm form article select,
+.contactPageContent .contactForm form article textarea {
+  padding: 0.75rem;
+  background-color: transparent;
+  border: 1px solid var(--margin-color);
+  color: var(--opposite);
+  font-size: var(--text-primary);
+  background-color: var(--pure);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.contactPageContent .contactForm form article select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.contactPageContent .contactForm form article select option {
+  background-color: var(--pure);
+  color: var(--opposite);
+}
+
+.contactPageContent .contactForm form article select.hasValue {
+  color: var(--opposite);
+}
+
+.contactPageContent .contactForm form article textarea {
+  min-height: 150px;
+  resize: none;
+}
+
+.contactPageContent .contactForm form article input:focus,
+.contactPageContent .contactForm form article select:focus,
+.contactPageContent .contactForm form article textarea:focus {
+  border-color: var(--opposite);
+}
+
+.contactPageContent .contactForm form article input:focus ~ label,
+.contactPageContent
+  .contactForm
+  form
+  article
+  input:not(:placeholder-shown)
+  ~ label,
+.contactPageContent .contactForm form article select:focus ~ label,
+.contactPageContent .contactForm form article select.hasValue ~ label,
+.contactPageContent .contactForm form article textarea:focus ~ label,
+.contactPageContent
+  .contactForm
+  form
+  article
+  textarea:not(:placeholder-shown)
+  ~ label {
+  top: 0;
+  transform: translateY(-50%) scale(0.75);
+  padding: 0.25rem 0.5rem;
+}
+
+.contactPageContent .contactForm form .submitButton {
+  grid-area: submit;
+  justify-self: start;
+  display: flex;
+  padding: 0.5rem 1.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-subheading);
+  font-weight: var(--text-subheading-weight);
+  letter-spacing: var(--text-subheading-spacing);
+  background-color: var(--opposite);
+  color: var(--pure);
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.contactPageContent .contactForm form .submitButton:hover {
+  opacity: 0.8;
+}
+
+.contactPageContent .contactRight {
+  grid-area: right;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    "details"
+    "socials"
+    "map";
+  padding: 1.5rem;
+}
+
+.contactPageContent .contactInfoDetails {
+  grid-area: details;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--margin-color);
+}
+
+.contactPageContent .contactInfoDetails h2 {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  font-weight: var(--text-label-weight);
+  letter-spacing: var(--text-label-spacing);
+  opacity: var(--text-label-opacity);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.contactPageContent .contactInfoDetails .contactDetailsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.contactPageContent .contactInfoDetails .contactDetailsGrid article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contactPageContent .contactInfoDetails .contactDetailsGrid article h3 {
+  font-family: var(--font-mono);
+  font-size: var(--text-subheading);
+  font-weight: var(--text-subheading-weight);
+  letter-spacing: var(--text-subheading-spacing);
+  opacity: var(--text-subheading-opacity);
+  text-transform: uppercase;
+}
+
+.contactPageContent .contactInfoDetails .contactDetailsGrid article p {
+  font-size: var(--text-secondary);
+  opacity: var(--text-secondary-opacity);
+}
+
+.contactPageContent .contactInfoDetails .contactDetailsGrid article p::before {
+  content: "→ ";
+}
+
+.contactPageContent .contactInfoBoxes {
+  grid-area: socials;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  gap: 1rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--margin-color);
+}
+
+.contactPageContent .contactInfoBoxes h2 {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  font-weight: var(--text-label-weight);
+  letter-spacing: var(--text-label-spacing);
+  opacity: var(--text-label-opacity);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.contactPageContent .contactInfoBoxes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.contactPageContent .contactInfoBoxes ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem !important;
+  height: 3.5rem !important;
+}
+
+.contactPageContent .contactInfoBoxes ul li a {
+  width: 90% !important;
+  height: 90% !important;
+}
+
+.contactPageContent .contactMap {
+  grid-area: map;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 0;
+}
+
+.contactPageContent .contactMap h2 {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  font-weight: var(--text-label-weight);
+  letter-spacing: var(--text-label-spacing);
+  opacity: var(--text-label-opacity);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.contactPageContent .contactMap > div {
+  flex: 1;
+  height: 100% !important;
+}
+
+.contactPageContent .faq {
+  grid-area: faq;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.contactPageContent .faq h2 {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  font-weight: var(--text-label-weight);
+  letter-spacing: var(--text-label-spacing);
+  opacity: var(--text-label-opacity);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.contactPageContent .faq .faqGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 1rem;
+}
+
+.contactPageContent .faq .faqGrid article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contactPageContent .faq .faqGrid article h3 {
+  font-family: var(--font-mono);
+  font-size: var(--text-subheading);
+  font-weight: var(--text-subheading-weight);
+  letter-spacing: var(--text-subheading-spacing);
+  opacity: var(--text-subheading-opacity);
+  text-transform: uppercase;
+}
+
+.contactPageContent .faq .faqGrid article p {
+  font-size: var(--text-secondary);
+  opacity: var(--text-secondary-opacity);
+}
+
+.contactPageContent .faq .faqGrid article p::before {
+  content: "→ ";
+}

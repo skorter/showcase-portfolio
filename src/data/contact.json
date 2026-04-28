@@ -1,0 +1,108 @@
+{
+  "socials": [
+    {
+      "id": "facebook",
+      "label": "Facebook",
+      "url": "https://www.facebook.com/profile.php?id=100008420058240&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1E5YyxttPM%2F#"
+    },
+    {
+      "id": "instagram",
+      "label": "Instagram",
+      "url": "https://www.instagram.com/_.sylyx._/"
+    },
+    {
+      "id": "threads",
+      "label": "Threads",
+      "url": "https://www.threads.net/@_.sylyx._"
+    },
+    {
+      "id": "youtube",
+      "label": "YouTube",
+      "url": "https://www.youtube.com/channel/UCxHYhJ7bEDULGSKfy-b2Aug"
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/sylvio-slim-makni-1b54331a6/"
+    },
+    {
+      "id": "github",
+      "label": "GitHub",
+      "url": "https://github.com/skorter"
+    },
+    {
+      "id": "gitlab",
+      "label": "GitLab",
+      "url": "https://git.fhict.nl/I546177"
+    },
+    {
+      "id": "linktree",
+      "label": "Linktree",
+      "url": "https://linktr.ee/sylvio.makni"
+    }
+  ],
+  "contactDetails": [
+    {
+      "id": "phone",
+      "label": "Phone",
+      "value": "+31 6 255 323 71"
+    },
+    {
+      "id": "email",
+      "label": "Email",
+      "value": "sylvio.makni@gmail.com"
+    }
+  ],
+  "questions&answers": [
+    {
+      "id": "q1",
+      "question": "What kind of projects are you looking to work on?",
+      "answer": "I'm mostly drawn to web projects that have a strong focus on user experience and creative design. I enjoy projects where there's room to think about both how something looks and how it works — whether that's a portfolio, a web app, or something more experimental."
+    },
+    {
+      "id": "q2",
+      "question": "Do you only do web or are you open to other types of projects?",
+      "answer": "Primarily web, but I'm open to other types of projects too — especially anything that involves UI/UX or visual design. I also have experience with video editing, so if that's ever relevant I'm happy to bring it in."
+    },
+    {
+      "id": "q3",
+      "question": "What inspires your design decisions?",
+      "answer": "A lot of it comes from browsing Pinterest and just saving things that catch my eye — textures, layouts, small details. I tend to gravitate toward designs that feel personal and intentional rather than flashy for the sake of it."
+    },
+    {
+      "id": "q4",
+      "question": "What does your typical project process look like from start to finish?",
+      "answer": "I usually start by gathering inspiration and getting a feel for the direction before touching any code. From there I move into Figma to sketch out the idea, then build it out iteratively — adjusting as I go based on how things actually feel in the browser."
+    },
+    {
+      "id": "q5",
+      "question": "How do you balance creativity with functionality in your work?",
+      "answer": "For me functionality always comes first — if something looks great but is confusing to use, it's not working. I try to find creative solutions within those constraints rather than sacrificing usability for aesthetics."
+    },
+    {
+      "id": "q6",
+      "question": "Do you work better solo or as part of a team?",
+      "answer": "Both, honestly. I'm comfortable working independently and taking ownership of a project, but I also enjoy collaborating — especially when it means bouncing ideas off someone else early in the process."
+    },
+    {
+      "id": "q7",
+      "question": "Are you open to collaborating with other students or creatives?",
+      "answer": "Definitely. I think some of the most interesting work happens when people with different skills or perspectives work together, so I'm always open to it."
+    },
+    {
+      "id": "q8",
+      "question": "Have you worked with clients before?",
+      "answer": "Definitely. I think some of the most interesting work happens when people with different skills or perspectives work together, so I'm always open to it."
+    },
+    {
+      "id": "q9",
+      "question": "Do you take on small or passion projects?",
+      "answer": "Yes, and honestly those are sometimes the most fun. Small projects are a great way to try something new or experiment without the pressure of a full brief."
+    },
+    {
+      "id": "q10",
+      "question": "What's something you're currently learning or improving on?",
+      "answer": "Right now I'm getting more comfortable with React and Next.js — this portfolio is actually built with both, so it's been a hands-on way to learn. I'm also trying to get better at writing cleaner, more structured code overall."
+    }
+  ]
+}
