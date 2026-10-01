@@ -81,6 +81,22 @@
   z-index: 100;
 }
 
+@media (max-height: 500px) and (orientation: landscape) {
+  .pageModal {
+    width: 94%;
+    height: 90%;
+    max-width: 1390px;
+    max-height: 780px;
+  }
+
+  .legendModal {
+    width: 40%;
+    height: 40%;
+    max-width: 550px;
+    max-height: 320px;
+  }
+}
+
 .modalBackdrop {
   position: fixed;
   inset: 0;

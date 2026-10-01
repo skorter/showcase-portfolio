@@ -85,3 +85,9 @@ body {
 body {
   font-family: var(--font-body);
 }
+
+@media (max-height: 500px) and (orientation: landscape) {
+  html {
+    font-size: 17px;
+  }
+}
