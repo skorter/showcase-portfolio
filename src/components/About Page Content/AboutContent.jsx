@@ -13,9 +13,14 @@ export default function AboutContent() {
         <p>{aboutData.about.introduction}</p>
       </section>
 
-      <section className={styles.interests}>
-        <h2>Interests</h2>
-        <p>{aboutData.about.interests}</p>
+      <section className={styles.aiStance}>
+        <h2>Stance on AI</h2>
+        <p>{aboutData.about.aiStance}</p>
+      </section>
+
+      <section className={styles.beyondCode}>
+        <h2>Beyond Code</h2>
+        <p>{aboutData.about.beyondCode}</p>
       </section>
 
       <section className={styles.skills}>

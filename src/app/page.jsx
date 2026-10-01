@@ -8,14 +8,21 @@ import PageModal from "@/components/Page Modal/PageModal";
 import LegendModal from "@/components/Legend Modal/LegendModal";
 import { useState, useEffect } from "react";
 import Loader from "@/components/Loader/Loader";
+import Rotater from "@/components/Rotater/Rotater";
 import { AnimatePresence } from "framer-motion";
+
+const BASE_WIDTH = 1610;
+const BASE_HEIGHT = 900;
 
 export default function Home() {
   const [modalContent, setModalContent] = useState(null);
   const [legendContent, setLegendContent] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [scale, setScale] = useState(1);
-  const BASE_WIDTH = 1610;
+  const [isPhone, setIsPhone] = useState(null);
+  const [isPortrait, setIsPortrait] = useState(false);
+
+  const [viewport, setViewport] = useState({ w: BASE_WIDTH, h: BASE_HEIGHT });
 
   useEffect(() => {
     let loaded = false;
@@ -49,8 +56,18 @@ export default function Home() {
 
   useEffect(() => {
     function updateScale() {
-      const ratio = window.innerWidth / BASE_WIDTH;
-      setScale(ratio);
+      const widthRatio = window.innerWidth / BASE_WIDTH;
+      const heightRatio = window.innerHeight / BASE_HEIGHT;
+      const newScale = Math.min(widthRatio, heightRatio);
+
+      setScale(newScale);
+      setViewport({
+        w: window.innerWidth,
+        h: window.innerHeight,
+      });
+
+      setIsPhone(Math.min(window.innerWidth, window.innerHeight) <= 500);
+      setIsPortrait(window.innerHeight > window.innerWidth);
     }
 
     updateScale();
@@ -68,15 +85,23 @@ export default function Home() {
 
   return (
     <>
-      <AnimatePresence>{isLoading && <Loader />}</AnimatePresence>
+      {isPhone === null && <div className={styles.cover}></div>}
+
+      <AnimatePresence>
+        {isPhone === false && isLoading && <Loader />}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {isPhone === true && isPortrait && <Rotater />}
+      </AnimatePresence>
 
       <main
         className={styles.main}
         style={{
           transform: `scale(${scale})`,
           transformOrigin: "top left",
-          width: `${BASE_WIDTH}px`,
-          height: `${100 / scale}vh`,
+          width: `${viewport.w / scale}px`,
+          height: `${viewport.h / scale}px`,
         }}
       >
         <section className={styles.interactiveBackground}>

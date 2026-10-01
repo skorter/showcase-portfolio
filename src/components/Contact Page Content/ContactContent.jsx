@@ -145,6 +145,7 @@ export default function ContactContent() {
               className={formData.subject ? styles.hasValue : ""}
             >
               <option value=""></option>
+              <option value="collaboration">Internship</option>
               <option value="freelance">Freelance Project</option>
               <option value="job">Job Opportunity</option>
               <option value="collaboration">Collaboration</option>
@@ -208,17 +209,6 @@ export default function ContactContent() {
           <MyMap />
         </section>
       </div>
-      <section className={styles.faq}>
-        <h2>Quick Answers</h2>
-        <div className={styles.faqGrid}>
-          {contactData["questions&answers"].map((qa) => (
-            <article key={qa.id || ""}>
-              <h3>{qa.question}</h3>
-              <p>{qa.answer}</p>
-            </article>
-          ))}
-        </div>
-      </section>
     </main>
   );
 }

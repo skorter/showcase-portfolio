@@ -63,6 +63,8 @@
   position: absolute;
   width: 80%;
   height: 80%;
+  max-width: 1290px;
+  max-height: 720px;
   place-self: center;
   pointer-events: none;
   z-index: 100;
@@ -72,9 +74,27 @@
   position: absolute;
   width: 33%;
   height: 33%;
+  max-width: 500px;
+  max-height: 300px;
   place-self: center;
   pointer-events: none;
   z-index: 100;
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .pageModal {
+    width: 94%;
+    height: 90%;
+    max-width: 1390px;
+    max-height: 780px;
+  }
+
+  .legendModal {
+    width: 40%;
+    height: 40%;
+    max-width: 550px;
+    max-height: 320px;
+  }
 }
 
 .modalBackdrop {
@@ -91,4 +111,11 @@
   background: rgba(0, 0, 0, 0.4);
   z-index: 90;
   pointer-events: auto;
+}
+
+.cover {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 9999;
 }

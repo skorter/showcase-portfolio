@@ -1,12 +1,22 @@
 {
   "about": {
-    "introduction": "Hi, I'm Sylvio! I'm currently in my third semester at Fontys ICT studying Interactive Media. I have a big passion for web development and mobile app design — I love the idea of building things that actually make sense and help people in some way. I let my creativity and intuition guide me when crafting digital experiences.",
-    "interests": "When I'm not coding or designing, you'll probably find me playing Overwatch, collecting Pokémon cards, or just putting on a vinyl record and chilling. I edit videos here and there too. Coffee is basically a personality trait at this point. In the winter I go skiing and in the summer I'm usually playing beach volleyball with friends."
+    "introduction": "Hi, I'm Sylvio, an ICT student at Fontys in Eindhoven, heading into my internship semester. I focus on frontend and web development because I love building things that actually make sense and help people. To get there, I let my creativity and intuition guide me.",
+    "aiStance": "AI teaches me. It doesn't build for me. I solve things myself first, ask for explanations when I'm stuck, and never ship code I don't understand. Slower, maybe. But it's mine.",
+    "beyondCode": "Outside of code, you'll probably find me playing Overwatch or hitting my daily step goal while playing Pokémon Go. I collect Pokémon cards, listen to music on vinyl whenever I can, and film and edit little daily vlogs for my friends. Iced coffee is basically a personality trait at this point. I'm a winter person stuck in a summer world. Skiing whenever I get the chance and hibernating the rest of the time."
   },
   "skills": [
     {
       "label": "Core Stack",
-      "items": ["HTML", "CSS", "JavaScript", "Supabase", "Next.js"]
+      "items": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "SASS",
+        "Node.js",
+        "Express.js",
+        "PostgreSQL",
+        "Supabase"
+      ]
     },
     {
       "label": "Tools",
@@ -14,25 +24,15 @@
         "VS Code",
         "Figma",
         "Git",
-        "GitLab",
         "GitHub",
-        "HERA",
-        "FileZilla",
-        "Vercel",
-        "Adobe Premiere Pro"
+        "Postman",
+        "Prisma",
+        "Vercel"
       ]
     },
     {
       "label": "Getting Familiar With",
-      "items": [
-        "React",
-        "SASS",
-        "Node.js",
-        "SQL (MSSQL)",
-        "Electron.js",
-        "Express.js",
-        "p5.js"
-      ]
+      "items": ["Electron.js", "p5.js", "Three.js"]
     }
   ],
   "facts": [
@@ -51,11 +51,11 @@
     },
     {
       "label": "Location",
-      "value": "Based in the Netherlands, open to remote opportunities worldwide."
+      "value": "Living in Eindhoven, the Netherlands. Originally from Varna, Bulgaria."
     },
     {
       "label": "Status",
-      "value": "Available for internships and freelance projects."
+      "value": "Heading into my internship semester and open to frontend internships."
     }
   ]
 }

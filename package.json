@@ -10,10 +10,6 @@
   },
   "dependencies": {
     "@developer-hub/liquid-glass": "^1.2.3",
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.1",
-    "@mui/lab": "^7.0.1-beta.22",
-    "@mui/material": "^7.3.8",
     "@react-email/render": "^2.0.6",
     "framer-motion": "^12.38.0",
     "fuse.js": "^7.3.0",

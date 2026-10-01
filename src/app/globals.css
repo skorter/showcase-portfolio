@@ -20,14 +20,14 @@
 
 @font-face {
   font-family: "Space Mono";
-  src: url("/fonts/SpaceMono-Regular.woff2") format("woff2");
+  src: url("/fonts/SpaceMono-Regular.ttf") format("truetype"); /* changed */
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Space Mono";
-  src: url("/fonts/SpaceMono-Bold.woff2") format("woff2");
+  src: url("/fonts/SpaceMono-Bold.ttf") format("truetype"); /* changed */
   font-weight: 700;
   font-display: swap;
 }
@@ -36,8 +36,6 @@
   --pure: #000000;
   --opposite: #ffffff;
   --background-color: rgba(255, 255, 255, 0.2);
-  --title-font-family: "Stretch Pro", sans-serif;
-  --body-font-family: "Roboto", sans-serif;
   --sticker-shadow: rgba(255, 255, 255, 0.5);
   --blur: 30px;
   --margin-color: rgba(255, 255, 255, 0.2);
@@ -50,7 +48,7 @@
 
   --text-label: 1rem;
   --text-label-opacity: 0.85;
-  --text-label-weight: 600;
+  --text-label-weight: 700;
   --text-label-spacing: 0.12em;
 
   --text-subheading: 0.85rem;
@@ -76,6 +74,18 @@
   --glass-backdrop: blur(2px) saturate(120%) brightness(1) !important;
 }
 
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   font-family: var(--font-body);
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  html {
+    font-size: 17px;
+  }
 }
