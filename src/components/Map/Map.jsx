@@ -25,7 +25,7 @@ export default function MyMap() {
   return (
     <Map
       provider={(x, y, z) =>
-        `https://tiles.stadiamaps.com/tiles/stamen_toner_lite/${z}/${x}/${y}.png`
+        `https://tiles.stadiamaps.com/tiles/stamen_toner_lite/${z}/${x}/${y}.png?api_key=${process.env.NEXT_PUBLIC_MAP_7DAYTRIAL_API_KEY}`
       }
       center={center}
       zoom={zoom}
