@@ -3,13 +3,15 @@
   grid-template-columns: repeat(6, 1fr);
   grid-template-areas:
     "image image introduction introduction introduction introduction"
-    "image image interests interests interests interests"
+    "image image aiStance aiStance aiStance aiStance"
+    "image image beyondCode beyondCode beyondCode beyondCode"
     "facts facts facts skills skills skills";
 }
 
 .aboutPageContent .image,
 .aboutPageContent .introduction,
-.aboutPageContent .interests,
+.aboutPageContent .aiStance,
+.aboutPageContent .beyondCode,
 .aboutPageContent .skills,
 .aboutPageContent .facts {
   padding: 1.5rem;
@@ -49,14 +51,15 @@
   text-indent: 1.5rem;
 }
 
-.aboutPageContent .interests {
-  grid-area: interests;
+.aboutPageContent .aiStance {
+  grid-area: aiStance;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  border-bottom: 1px solid var(--margin-color);
 }
 
-.aboutPageContent .interests h2 {
+.aboutPageContent .aiStance h2 {
   font-family: var(--font-mono);
   font-size: var(--text-label);
   font-weight: var(--text-label-weight);
@@ -66,7 +69,30 @@
   text-align: center;
 }
 
-.aboutPageContent .interests p {
+.aboutPageContent .aiStance p {
+  font-size: var(--text-primary);
+  opacity: var(--text-primary-opacity);
+  text-indent: 1.5rem;
+}
+
+.aboutPageContent .beyondCode {
+  grid-area: beyondCode;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.aboutPageContent .beyondCode h2 {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  font-weight: var(--text-label-weight);
+  letter-spacing: var(--text-label-spacing);
+  opacity: var(--text-label-opacity);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.aboutPageContent .beyondCode p {
   font-size: var(--text-primary);
   opacity: var(--text-primary-opacity);
   text-indent: 1.5rem;

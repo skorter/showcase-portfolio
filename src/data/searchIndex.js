@@ -11,10 +11,17 @@ export const searchIndex = [
     href: "/about",
   },
   {
-    id: "about-interests",
+    id: "about-beyond-code",
     page: "About",
-    section: "Interests",
-    content: aboutData.about.interests,
+    section: "Beyond Code",
+    content: aboutData.about.beyondCode,
+    href: "/about",
+  },
+  {
+    id: "about-ai-stance",
+    page: "About",
+    section: "AI Stance",
+    content: aboutData.about.aiStance,
     href: "/about",
   },
   {
