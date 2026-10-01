@@ -1,20 +1,20 @@
 .projectPageContent {
   width: 100%;
   padding: 1rem 1rem 0 1rem;
-}
-
-.projectPageContent :global(.MuiMasonry-root) {
-  margin: 0 !important;
-  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .projectPageContent .projectItem {
-  border: 2px solid var(--margin-color);
-  border-radius: 8px;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.projectPageContent .projectItem:not(:last-child) {
+  border-bottom: 1px solid var(--margin-color);
 }
 
 .projectPageContent .projectItem .projectImageLink {
