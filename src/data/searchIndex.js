@@ -95,16 +95,32 @@ export const searchIndex = [
     content: social.label,
     href: "/contact",
   })),
-  ...projectsData.map((project) => ({
-    id: `project-${project.projectId}`,
-    page: "Projects",
-    section: project.projectName,
-    content: [
-      project.projectDescription,
-      project.projectMeta.role,
-      project.projectMeta.scope,
-      project.projectTechStack.map((tech) => tech.name).join(", "),
-    ].join(" — "),
-    href: "/projects",
-  })),
+  ...projectsData.flatMap((project) => [
+    {
+      id: `project-${project.projectId}-overview`,
+      page: "Projects",
+      section: project.projectName,
+      content: [
+        project.projectDescription,
+        project.projectMeta.role,
+        project.projectMeta.scope,
+        project.projectTechStack.map((tech) => tech.name).join(", "),
+      ].join(" — "),
+      href: "/projects",
+    },
+    {
+      id: `project-${project.projectId}-why`,
+      page: "Projects",
+      section: `${project.projectName} — Why I built it`,
+      content: project.projectWhy?.join(" · ") ?? "",
+      href: "/projects",
+    },
+    {
+      id: `project-${project.projectId}-learned`,
+      page: "Projects",
+      section: `${project.projectName} — What I learned`,
+      content: project.projectLearned?.join(" · ") ?? "",
+      href: "/projects",
+    },
+  ]),
 ];
