@@ -10,12 +10,16 @@ import { useState, useEffect } from "react";
 import Loader from "@/components/Loader/Loader";
 import { AnimatePresence } from "framer-motion";
 
+const BASE_WIDTH = 1610;
+const BASE_HEIGHT = 900;
+
 export default function Home() {
   const [modalContent, setModalContent] = useState(null);
   const [legendContent, setLegendContent] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [scale, setScale] = useState(1);
-  const BASE_WIDTH = 1610;
+
+  const [viewport, setViewport] = useState({ w: BASE_WIDTH, h: BASE_HEIGHT });
 
   useEffect(() => {
     let loaded = false;
@@ -49,8 +53,15 @@ export default function Home() {
 
   useEffect(() => {
     function updateScale() {
-      const ratio = window.innerWidth / BASE_WIDTH;
-      setScale(ratio);
+      const widthRatio = window.innerWidth / BASE_WIDTH;
+      const heightRatio = window.innerHeight / BASE_HEIGHT;
+      const newScale = Math.min(widthRatio, heightRatio);
+
+      setScale(newScale);
+      setViewport({
+        w: window.innerWidth,
+        h: window.innerHeight,
+      });
     }
 
     updateScale();
@@ -75,8 +86,8 @@ export default function Home() {
         style={{
           transform: `scale(${scale})`,
           transformOrigin: "top left",
-          width: `${BASE_WIDTH}px`,
-          height: `${100 / scale}vh`,
+          width: `${viewport.w / scale}px`,
+          height: `${viewport.h / scale}px`,
         }}
       >
         <section className={styles.interactiveBackground}>
