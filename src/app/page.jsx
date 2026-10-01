@@ -8,6 +8,7 @@ import PageModal from "@/components/Page Modal/PageModal";
 import LegendModal from "@/components/Legend Modal/LegendModal";
 import { useState, useEffect } from "react";
 import Loader from "@/components/Loader/Loader";
+import Rotater from "@/components/Rotater/Rotater";
 import { AnimatePresence } from "framer-motion";
 
 const BASE_WIDTH = 1610;
@@ -18,6 +19,8 @@ export default function Home() {
   const [legendContent, setLegendContent] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [scale, setScale] = useState(1);
+  const [isPhone, setIsPhone] = useState(null);
+  const [isPortrait, setIsPortrait] = useState(false);
 
   const [viewport, setViewport] = useState({ w: BASE_WIDTH, h: BASE_HEIGHT });
 
@@ -62,6 +65,9 @@ export default function Home() {
         w: window.innerWidth,
         h: window.innerHeight,
       });
+
+      setIsPhone(Math.min(window.innerWidth, window.innerHeight) <= 500);
+      setIsPortrait(window.innerHeight > window.innerWidth);
     }
 
     updateScale();
@@ -79,7 +85,15 @@ export default function Home() {
 
   return (
     <>
-      <AnimatePresence>{isLoading && <Loader />}</AnimatePresence>
+      {isPhone === null && <div className={styles.cover}></div>}
+
+      <AnimatePresence>
+        {isPhone === false && isLoading && <Loader />}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {isPhone === true && isPortrait && <Rotater />}
+      </AnimatePresence>
 
       <main
         className={styles.main}
