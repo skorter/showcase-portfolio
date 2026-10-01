@@ -63,6 +63,8 @@
   position: absolute;
   width: 80%;
   height: 80%;
+  max-width: 1290px;
+  max-height: 720px;
   place-self: center;
   pointer-events: none;
   z-index: 100;
@@ -72,6 +74,8 @@
   position: absolute;
   width: 33%;
   height: 33%;
+  max-width: 500px;
+  max-height: 300px;
   place-self: center;
   pointer-events: none;
   z-index: 100;
