@@ -17,7 +17,6 @@ A personal creative portfolio built to represent who I am — my interests, my p
 - [Version Control Workflow](#version-control-workflow)
 - [Installation & Usage](#installation--usage)
 - [Status & Roadmap](#status--roadmap)
-- [Reflections](#reflections)
 - [License](#license)
 - [Acknowledgements & Inspiration](#acknowledgements--inspiration)
 
@@ -72,21 +71,20 @@ Rather than defaulting to flashy visuals or a purely technical showcase, this po
 
 ## Dependencies & Libraries
 
-| Library                                     | Purpose                           | Where it's used                     |
-| ------------------------------------------- | --------------------------------- | ----------------------------------- |
-| `framer-motion`                             | Drag, snap, and spring animations | Landing page sticker board          |
-| `fuse.js`                                   | Fuzzy search                      | Search bar dropdown                 |
-| `typed.js`                                  | Typewriter effect                 | Search bar overlay on landing page  |
-| `lottie-react`                              | JSON-based animations             | Loader and empty states             |
-| `next-themes`                               | Dark/light mode                   | Global theme toggle                 |
-| `sonner`                                    | Toast notifications               | Theme and sound toggle feedback     |
-| `lucide-react`                              | Icon set                          | Throughout the UI                   |
-| `react-social-icons`                        | Social media icons                | Contact page                        |
-| `resend` + `@react-email/render`            | Email sending                     | Contact form submission             |
-| `sweetalert2`                               | Alert dialogs                     | Contact form success/error messages |
-| `pigeon-maps`                               | Interactive map                   | Contact page location               |
-| `@developer-hub/liquid-glass`               | Liquid glass effect               | Hero container on landing page      |
-| `@mui/lab` + `@mui/material` + `@emotion/*` | Masonry layout                    | Projects page grid                  |
+| Library                          | Purpose                           | Where it's used                     |
+| -------------------------------- | --------------------------------- | ----------------------------------- |
+| `framer-motion`                  | Drag, snap, and spring animations | Landing page sticker board          |
+| `fuse.js`                        | Fuzzy search                      | Search bar dropdown                 |
+| `typed.js`                       | Typewriter effect                 | Search bar overlay on landing page  |
+| `lottie-react`                   | JSON-based animations             | Cube loader and phone rotate prompt |
+| `next-themes`                    | Dark/light mode                   | Global theme toggle                 |
+| `sonner`                         | Toast notifications               | Theme and sound toggle feedback     |
+| `lucide-react`                   | Icon set                          | Throughout the UI                   |
+| `react-social-icons`             | Social media icons                | Contact page                        |
+| `resend` + `@react-email/render` | Email sending                     | Contact form submission             |
+| `sweetalert2`                    | Alert dialogs                     | Contact form success/error messages |
+| `pigeon-maps`                    | Interactive map                   | Contact page location               |
+| `@developer-hub/liquid-glass`    | Liquid glass effect               | Hero container on landing page      |
 
 ---
 
@@ -127,7 +125,6 @@ Dark/light mode is managed by `next-themes` at the root layout level. Sound togg
 │   ├── 📁 sounds/
 │   │   └── 🎵 click.mp3                        # UI click sound effect (toggleable)
 │   ├── 📁 stickers/                            # 31 draggable sticker assets for the landing page
-│   ├── 📁 videos/                              # Reserved for future video assets
 │   ├── 🖼️ file.svg
 │   ├── 🖼️ globe.svg
 │   ├── 🖼️ next.svg
@@ -148,17 +145,13 @@ Dark/light mode is managed by `next-themes` at the root layout level. Sound togg
 │   │   │   └── 📄 SoundProvider.jsx            # Global sound context/provider
 │   │   ├── 📄 favicon.ico
 │   │   ├── 🎨 globals.css                      # Global styles and CSS variables
-│   │   ├── 📄 layout.jsx                       # Root layout (fonts, providers, metadata)
+│   │   ├── 📄 layout.jsx                       # Root layout (providers, metadata)
 │   │   ├── 📄 page.jsx                         # Landing page (sticker board)
 │   │   ├── 🎨 page.module.css
 │   │   └── 📄 providers.jsx                    # Wraps app with ThemeProvider + SoundProvider
 │   ├── 📁 assets/
-│   │   ├── ⚙️ 2x2 Modular Rubiks cube [Dark Mode].json
-│   │   ├── ⚙️ 3x3 Cube Loader #3.json
-│   │   ├── ⚙️ Isometric Cube(s) Empty State #2.json
-│   │   ├── ⚙️ Trim Lines Preloader.json
-│   │   ├── ⚙️ VRAR Cubes [Dark Theme].json
-│   │   └── ⚙️ loader-animation.json            # Lottie JSON animation files
+│   │   ├── ⚙️ loader-animation.json            # Lottie cube loader (laptops)
+│   │   └── ⚙️ rotate-animation.json            # Lottie rotate prompt (phones)
 │   ├── 📁 components/
 │   │   ├── 📁 About Page Content/
 │   │   │   ├── 📄 AboutContent.jsx
@@ -166,9 +159,6 @@ Dark/light mode is managed by `next-themes` at the root layout level. Sound togg
 │   │   ├── 📁 Contact Page Content/
 │   │   │   ├── 📄 ContactContent.jsx
 │   │   │   └── 🎨 ContactContent.module.css
-│   │   ├── 📁 Home Tiles/
-│   │   │   ├── 📄 HomeTiles.jsx
-│   │   │   └── 🎨 HomeTiles.module.css
 │   │   ├── 📁 Interactive Background/
 │   │   │   ├── 📄 InteractiveBackground.jsx
 │   │   │   └── 🎨 InteractiveBackground.module.css
@@ -189,6 +179,9 @@ Dark/light mode is managed by `next-themes` at the root layout level. Sound togg
 │   │   ├── 📁 Projects Page Content/
 │   │   │   ├── 📄 ProjectsContent.jsx
 │   │   │   └── 🎨 ProjectsContent.module.css
+│   │   ├── 📁 Rotater/
+│   │   │   ├── 📄 Rotater.jsx
+│   │   │   └── 🎨 Rotater.module.css
 │   │   ├── 📁 Search Bar/
 │   │   │   ├── 📄 SearchBar.jsx
 │   │   │   └── 🎨 SearchBar.module.css
@@ -219,13 +212,14 @@ Dark/light mode is managed by `next-themes` at the root layout level. Sound togg
 - **Dark / light mode** — A persistent theme toggle powered by `next-themes`, with a toast notification (via Sonner) confirming the switch.
 - **Sound toggle** — UI click sounds can be turned on or off globally via a sound context provider, with toast feedback on toggle.
 - **Global search** — A fuzzy search bar (Fuse.js) lets visitors quickly navigate to any section or project. Triggered from the landing page, it surfaces results in a dropdown overlay with a typewriter animation (Typed.js).
-- **Projects page** — A masonry grid layout (MUI Lab) displaying project cards with thumbnails, descriptions, and tech stack tags. All content is pulled from a JSON data file.
-- **About page** — Personal background, skills, and tech stack icons, driven by JSON data.
+- **Projects page** — A curated set of finished projects, each shown with a tilted sticker-style screenshot, a short description, why I built it, what I learned, the tech stack, and links to the code and live demo. All content is pulled from a JSON data file.
+- **About page** — An introduction, my stance on AI in my workflow, what I do beyond code, and my skills, languages and other facts about me, all driven by JSON data.
 - **Contact page** — A contact form connected to Resend for real email delivery, with SweetAlert2 confirmation/error dialogs, social media links, and an interactive map (Pigeon Maps) showing my location.
-- **Animated loader** — A Lottie-based loading animation shown on initial page load.
+- **Animated loader** — A Lottie-based cube animation shown on initial page load on laptops and desktops.
 - **Liquid glass hero** — A `@developer-hub/liquid-glass` container used as a styled hero element on the landing page.
 - **JSON-driven content** — All page content (projects, about, contact details, legend) lives in `/src/data/` as JSON files, keeping data cleanly separated from UI components.
-- **Responsive layout** — Desktop-first design scaled dynamically using a viewport-width ratio, so the layout adapts proportionally across different screen sizes without relying on traditional CSS breakpoints.
+- **Responsive layout** — The sticker board is designed at a fixed base size (1610×900) and scaled as one unit to fit both the width and height of any screen, so every sticker stays visible on a single page without scrolling. On phones held sideways, text and modals are slightly enlarged for readability.
+- **Rotate prompt** — On phones held upright, a looping Lottie animation asks visitors to turn their phone sideways. It fades out automatically the moment the phone is rotated, revealing the full sticker board.
 
 ---
 
@@ -241,7 +235,7 @@ Commit frequency was inconsistent throughout the project — there were stretche
 
 ## Installation & Usage
 
-The deployed project is live at: _[Vercel link coming soon]_
+The deployed project is live at: [showcase-portfolio-seven.vercel.app](https://showcase-portfolio-seven.vercel.app/)
 
 To run it locally:
 
@@ -263,7 +257,7 @@ npm run dev
 > RESEND_API_KEY=your_api_key_here
 > ```
 
-**Requirements:** Node.js v18 or higher.
+**Requirements:** Node.js 20.9 or higher (developed and tested with Node.js 24).
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
@@ -275,22 +269,8 @@ The portfolio is currently complete with its core feature set: a draggable inter
 
 **Planned improvements:**
 
-- Mobile-friendly redesign that adapts the sticker board for smaller screens
-- More projects that better showcase my skills and knowledge
-- Better project descriptions with proper READMEs for each one
+- Add Mediatheque once it's finished
 - Expanded use of remaining sticker assets
-
----
-
-## Reflections
-
-This was my first project built with Next.js and React, and honestly, it taught me more than I expected — not just about the frameworks themselves, but about how to think about a project before writing a single line of code. Folder organisation, component grouping, co-locating styles with CSS Modules — these aren't the exciting parts of building something, but getting them right made everything else easier.
-
-One of the bigger realisations was learning to work with what's already out there. I came in knowing I couldn't build everything from scratch, and leaning into the right dependencies and libraries was a conscious and worthwhile decision — it let me focus on the things that actually mattered for this project.
-
-On the technical side, I got a lot more comfortable with `useState` and properly understanding destructuring — both for props and for hooks. Small things, but they add up. I'm glad I didn't use TypeScript for this — combining Next.js, React, and TypeScript all at once as a first project would have been too much. That said, I plan on incorporating it in one of my next university projects, where I can experiment, make mistakes, and learn without too much pressure.
-
-If I were to do it again, I'd largely keep the same structure — the component grouping and CSS Module approach held up well and I'd carry that pattern forward. The one thing I'd do differently is take Git more seriously, even on a solo project. Consistent, meaningful commits are a good habit no matter who's depending on the repo, and this project was a good reminder of that.
 
 ---
 
